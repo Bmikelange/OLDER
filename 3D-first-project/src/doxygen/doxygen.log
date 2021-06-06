@@ -1,0 +1,63 @@
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/image_io.h:14: warning: argument 'filemane' of command @param is not found in the argument list of read_image(const char *filename)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/image_io.h:16: warning: The following parameters of read_image(const char *filename) are not documented:
+  parameter 'filename'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/image_hdr.h:14: warning: argument 'filemane' of command @param is not found in the argument list of read_image_hdr(const char *filename)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/image_hdr.h:16: warning: The following parameters of read_image_hdr(const char *filename) are not documented:
+  parameter 'filename'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/widgets.h:102: warning: The following parameters of button(Widgets &widgets, const char *text, int &status) are not documented:
+  parameter 'widgets'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/widgets.h:132: warning: The following parameters of edit(Widgets &widgets, const int text_size, char *text) are not documented:
+  parameter 'widgets'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/widgets.h:107: warning: The following parameters of select(Widgets &widgets, const char *text, const int option, int &status) are not documented:
+  parameter 'widgets'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/widgets.h:113: warning: The following parameters of text_area(Widgets &w, const int height, const char *text, int &begin_line) are not documented:
+  parameter 'w'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/texture.h:19: warning: The following parameters of make_texture(const int unit, const Image &im, const GLenum texel_type=GL_RGBA32F) are not documented:
+  parameter 'unit'
+  parameter 'im'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/texture.h:23: warning: The following parameters of make_texture(const int unit, const ImageData &im, const GLenum texel_type=GL_RGBA) are not documented:
+  parameter 'unit'
+  parameter 'im'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/program.h:20: warning: The following parameters of read_program(const char *filename, const char *definitions="") are not documented:
+  parameter 'filename'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/texture.h:27: warning: The following parameters of read_texture(const int unit, const char *filename, const GLenum texel_type=GL_RGBA) are not documented:
+  parameter 'unit'
+  parameter 'filename'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/gKit/mesh.h:319: warning: The following parameters of Mesh::draw(const Transform &model, const Transform &view, const Transform &projection, const bool use_light, const Point &light, const Color &light_color, const bool use_texture, const GLuint texture, const bool use_alpha_test, const float alpha_min) are not documented:
+  parameter 'model'
+  parameter 'view'
+  parameter 'projection'
+  parameter 'light'
+  parameter 'light_color'
+  parameter 'texture'
+  parameter 'use_alpha_test'
+  parameter 'alpha_min'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:40: warning: argument 'point' of command @param is not found in the argument list of Ter::Ter(int Va[2], int Vb[2], int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:40: warning: argument 'point' of command @param is not found in the argument list of Ter::Ter(int Va[2], int Vb[2], int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:40: warning: argument 'nombre' of command @param is not found in the argument list of Ter::Ter(int Va[2], int Vb[2], int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:40: warning: argument 'nombre' of command @param is not found in the argument list of Ter::Ter(int Va[2], int Vb[2], int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:47: warning: The following parameters of Ter::Ter(int Va[2], int Vb[2], int i, int j) are not documented:
+  parameter 'Va'
+  parameter 'Vb'
+  parameter 'i'
+  parameter 'j'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:49: warning: argument 'image' of command @param is not found in the argument list of Ter::Ter(Image I, float z1, float z2)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:49: warning: argument 'hauteur' of command @param is not found in the argument list of Ter::Ter(Image I, float z1, float z2)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:49: warning: argument 'hauteur' of command @param is not found in the argument list of Ter::Ter(Image I, float z1, float z2)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:55: warning: The following parameters of Ter::Ter(Image I, float z1, float z2) are not documented:
+  parameter 'I'
+  parameter 'z1'
+  parameter 'z2'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:78: warning: argument 'position' of command @param is not found in the argument list of Ter::Elevation(float V1, float V2)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:78: warning: argument 'position' of command @param is not found in the argument list of Ter::Elevation(float V1, float V2)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:83: warning: The following parameters of Ter::Elevation(float V1, float V2) are not documented:
+  parameter 'V1'
+  parameter 'V2'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:85: warning: argument 'dire' of command @param is not found in the argument list of Ter::getd2(int i)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:91: warning: The following parameters of Ter::getd2(int i) are not documented:
+  parameter 'i'
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:64: warning: argument 'position' of command @param is not found in the argument list of Ter::recupPoint(int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:64: warning: argument 'position' of command @param is not found in the argument list of Ter::recupPoint(int i, int j)
+/home/etu/p1713175/Téléchargements/gkit2light4/src/l2_lifgfx/Ter.h:71: warning: The following parameters of Ter::recupPoint(int i, int j) are not documented:
+  parameter 'i'
+  parameter 'j'

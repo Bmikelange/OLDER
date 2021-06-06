@@ -1,0 +1,135 @@
+#table_2,
+#entete,
+#menu,
+#contenu,
+#footer {
+    padding: 1em 0;
+}
+p
+{
+    color:white;
+}
+h3 {
+    color:white;
+}
+label{
+    color:white;
+}
+body {
+color:black;
+background-color:white;
+}
+
+#entete {
+background-image:url("./img/papillon.jpg");
+    background-size: 15% 100%;
+	color:#F4BC58;
+	background-color:#40A497;
+    background-position: left;
+	text-align: right;
+    border-radius: 1em;
+	background-repeat: no-repeat;
+	padding-left: 1em;
+	font-family : Cursive;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3%;
+}
+
+#menu {
+    width: 18%;
+    background-color: #6D3C82;
+    padding-left: 1em;
+    line-height: 2em;
+	font-family : Cursive;
+}
+
+#menu a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#menu a:visited {
+    color: pink;
+    text-decoration: none;
+}
+
+a:hover,a:focus{
+     background:rgba(0,0,0,.4);
+     box-shadow:0 1px 0 rgba(255,255,255,.4);
+}
+a:hover span,a:focus span{
+     opacity:1;
+}
+a span{
+     position:absolute; 
+	 margin-top:23px;
+     margin-left:-35px;
+	 color:#09c;
+     background:rgba(0,0,0,.9);
+     padding:15px;
+     border-radius:3px;
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+	 opacity:0;
+}
+fieldset{
+    margin: 0 auto;
+    background-color: brown;
+    background-image:url("./img/fond3.jpg");
+    background-size: 100% 100%;
+}
+fieldset a {
+    color:brown;
+}
+#table_2 {
+        margin: 0 auto;
+        background-color: #3E2709;
+}
+
+#contenu {
+    width: 75%;
+    background-color: #FFFFFF;
+    padding-bottom: 6em;
+    background-repeat: no-repeat;
+    background-image:url("./img/papillon.png");
+    background-size: 105% 135%;
+}
+
+#footer {
+    background-color: #40A497;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    clear: both;
+    border-radius: 1em;
+}
+
+
+#titreAccueil {
+    text-align: center;
+}
+
+
+
+
+.thtrav
+{
+
+    border: 1px solid black; 
+
+}
+
+.tdtrav
+{
+
+    border: 1px solid black;
+
+}
+
+
+
+
+

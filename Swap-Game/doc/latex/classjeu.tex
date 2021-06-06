@@ -1,0 +1,168 @@
+\hypertarget{classjeu}{}\section{jeu Class Reference}
+\label{classjeu}\index{jeu@{jeu}}
+
+
+gere les instances de jeu  
+
+
+
+
+{\ttfamily \#include $<$jeu.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}{jeu} ()
+\item 
+virtual \hyperlink{classjeu_a55385a33ef40e0579eb3a3634566c4a8}{$\sim$jeu} ()
+\item 
+double \hyperlink{classjeu_ae52ca2a3e15e800c949ea1a8928b56bc}{Get\+Chronometre} ()
+\item 
+void \hyperlink{classjeu_a8e8b72cb902c9907b3178a8cb1cc1bfe}{Set\+Chronometre} (double val)
+\item 
+\hyperlink{classniveau}{niveau} \& \hyperlink{classjeu_af131cda091cb76267a703144a0fac1c4}{Getniveau} (int j)
+\item 
+void \hyperlink{classjeu_a03a2ef6938f3741425f93003d36f8843}{Setniveau} (\hyperlink{classniveau}{niveau} val, int i)
+\item 
+int \hyperlink{classjeu_a76b8b62a71cf8f34c56774ee54be306e}{Gettotal\+Etoile} ()
+\item 
+void \hyperlink{classjeu_a32a2fbd405a880681a0f81f19ddd5d9e}{Set\+Total\+Etoile} (int val)
+\item 
+void {\bfseries Init\+Jeu} ()\hypertarget{classjeu_a20847bf90be69aabbf0d17b8774192fb}{}\label{classjeu_a20847bf90be69aabbf0d17b8774192fb}
+
+\item 
+void {\bfseries Save\+Jeu} ()\hypertarget{classjeu_aa7e6217b0d723ff51d942649dea5aa26}{}\label{classjeu_aa7e6217b0d723ff51d942649dea5aa26}
+
+\item 
+int {\bfseries modif\+Chrono} (struct tm timer)\hypertarget{classjeu_a06c149bc7f328b62582be80e2d66e35a}{}\label{classjeu_a06c149bc7f328b62582be80e2d66e35a}
+
+\item 
+int {\bfseries modif\+Chronograph} (struct tm timer)\hypertarget{classjeu_a811b366c2e6c2f72205fe20fe36ab20c}{}\label{classjeu_a811b366c2e6c2f72205fe20fe36ab20c}
+
+\item 
+void {\bfseries test\+Regression} ()\hypertarget{classjeu_ac3ecbad278c391da5bd56bb6f2679a7b}{}\label{classjeu_ac3ecbad278c391da5bd56bb6f2679a7b}
+
+\item 
+int {\bfseries verif\+Ordre} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} tab)\hypertarget{classjeu_aead2ff12e229fcee534709d448e7aeb0}{}\label{classjeu_aead2ff12e229fcee534709d448e7aeb0}
+
+\item 
+void {\bfseries affiche\+Erreur} ()\hypertarget{classjeu_a6163fa8545180fbbdedaf58c2e1a48a9}{}\label{classjeu_a6163fa8545180fbbdedaf58c2e1a48a9}
+
+\item 
+void {\bfseries afficher\+Action} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabB, \hyperlink{classniveau}{niveau} niveau1)\hypertarget{classjeu_ab43ad0bc0891355bf049ead4f67a1279}{}\label{classjeu_ab43ad0bc0891355bf049ead4f67a1279}
+
+\item 
+int {\bfseries test} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabB, int i, struct tm $\ast$ttime)\hypertarget{classjeu_a073ab61bef315ebe3c985fc2840041c6}{}\label{classjeu_a073ab61bef315ebe3c985fc2840041c6}
+
+\item 
+void {\bfseries affiche\+Histoire} (int i)\hypertarget{classjeu_a062e5e543f9f1571fe76e5e9e340e2db}{}\label{classjeu_a062e5e543f9f1571fe76e5e9e340e2db}
+
+\item 
+bool {\bfseries jeu\+Action} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} tabB, \hyperlink{classniveau}{niveau} niveau1, int i, int \&m)\hypertarget{classjeu_a7f2fac64700bd81e936cf54d6e7ec725}{}\label{classjeu_a7f2fac64700bd81e936cf54d6e7ec725}
+
+\item 
+void {\bfseries set\+Vp} (int \hyperlink{classniveau}{niveau}, int nb\+Coup)\hypertarget{classjeu_a32cb5cc33a36ddb52960794033d6e2d0}{}\label{classjeu_a32cb5cc33a36ddb52960794033d6e2d0}
+
+\item 
+int {\bfseries verifnb\+Coup} (\hyperlink{classniveau}{niveau} \hyperlink{classniveau}{niveau}, int nb\+Coup)\hypertarget{classjeu_a27ea852c9f3031007c68d780c5161b67}{}\label{classjeu_a27ea852c9f3031007c68d780c5161b67}
+
+\item 
+void {\bfseries aleatoire\+Gen} (\hyperlink{classniveau}{niveau} \&niveau1)\hypertarget{classjeu_acd9243df01b716fadbdefa37368edce3}{}\label{classjeu_acd9243df01b716fadbdefa37368edce3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+gere les instances de jeu 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{jeu@{jeu}!jeu@{jeu}}
+\index{jeu@{jeu}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{jeu()}{jeu()}}]{\setlength{\rightskip}{0pt plus 5cm}jeu\+::jeu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}{}\label{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}
+Default constructor \index{jeu@{jeu}!````~jeu@{$\sim$jeu}}
+\index{````~jeu@{$\sim$jeu}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{$\sim$jeu()}{~jeu()}}]{\setlength{\rightskip}{0pt plus 5cm}jeu\+::$\sim$jeu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classjeu_a55385a33ef40e0579eb3a3634566c4a8}{}\label{classjeu_a55385a33ef40e0579eb3a3634566c4a8}
+Default destructor 
+
+\subsection{Member Function Documentation}
+\index{jeu@{jeu}!Get\+Chronometre@{Get\+Chronometre}}
+\index{Get\+Chronometre@{Get\+Chronometre}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Get\+Chronometre()}{GetChronometre()}}]{\setlength{\rightskip}{0pt plus 5cm}double jeu\+::\+Get\+Chronometre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_ae52ca2a3e15e800c949ea1a8928b56bc}{}\label{classjeu_ae52ca2a3e15e800c949ea1a8928b56bc}
+Access Chronometre \begin{DoxyReturn}{Returns}
+The current value of m\+\_\+\+Chronometre 
+\end{DoxyReturn}
+\index{jeu@{jeu}!Getniveau@{Getniveau}}
+\index{Getniveau@{Getniveau}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Getniveau(int j)}{Getniveau(int j)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf niveau}\& jeu\+::\+Getniveau (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_af131cda091cb76267a703144a0fac1c4}{}\label{classjeu_af131cda091cb76267a703144a0fac1c4}
+Access m\+\_\+niveau\mbox{[}i\mbox{]} \begin{DoxyReturn}{Returns}
+The current value of niveau\mbox{[}i\mbox{]} 
+\end{DoxyReturn}
+\index{jeu@{jeu}!Gettotal\+Etoile@{Gettotal\+Etoile}}
+\index{Gettotal\+Etoile@{Gettotal\+Etoile}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Gettotal\+Etoile()}{GettotalEtoile()}}]{\setlength{\rightskip}{0pt plus 5cm}int jeu\+::\+Gettotal\+Etoile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_a76b8b62a71cf8f34c56774ee54be306e}{}\label{classjeu_a76b8b62a71cf8f34c56774ee54be306e}
+Access m\+\_\+total\+Etoile \begin{DoxyReturn}{Returns}
+The current value of m\+\_\+total\+Etoile 
+\end{DoxyReturn}
+\index{jeu@{jeu}!Set\+Chronometre@{Set\+Chronometre}}
+\index{Set\+Chronometre@{Set\+Chronometre}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Set\+Chronometre(double val)}{SetChronometre(double val)}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Set\+Chronometre (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_a8e8b72cb902c9907b3178a8cb1cc1bfe}{}\label{classjeu_a8e8b72cb902c9907b3178a8cb1cc1bfe}
+Set Chronometre 
+\begin{DoxyParams}{Parameters}
+{\em val} & New value to set \\
+\hline
+\end{DoxyParams}
+\index{jeu@{jeu}!Setniveau@{Setniveau}}
+\index{Setniveau@{Setniveau}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Setniveau(niveau val, int i)}{Setniveau(niveau val, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Setniveau (
+\begin{DoxyParamCaption}
+\item[{{\bf niveau}}]{val, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_a03a2ef6938f3741425f93003d36f8843}{}\label{classjeu_a03a2ef6938f3741425f93003d36f8843}
+Set niveau\mbox{[}10\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em val} & New value to set \\
+\hline
+\end{DoxyParams}
+\index{jeu@{jeu}!Set\+Total\+Etoile@{Set\+Total\+Etoile}}
+\index{Set\+Total\+Etoile@{Set\+Total\+Etoile}!jeu@{jeu}}
+\subsubsection[{\texorpdfstring{Set\+Total\+Etoile(int val)}{SetTotalEtoile(int val)}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Set\+Total\+Etoile (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classjeu_a32a2fbd405a880681a0f81f19ddd5d9e}{}\label{classjeu_a32a2fbd405a880681a0f81f19ddd5d9e}
+Set total\+Etoile 
+\begin{DoxyParams}{Parameters}
+{\em val} & New value to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/main/jeu.\+h\item 
+src/main/jeu.\+cpp\end{DoxyCompactItemize}

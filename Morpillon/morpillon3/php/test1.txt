@@ -1,0 +1,20 @@
+<table>
+                <tr>
+                    <th>id</th>
+                    <th>nomIngredient</th>
+                    <th>categorieIngredient</th>
+                    <th>quantiteDispo</th>
+                </tr>
+            <?php//On affiche les lignes du tableau une à une à l'aide d'une boucle
+            while($donnees = mysql_fetch_array($reponse))
+            {
+            ?>
+                <tr>
+                    <th><?php echo $donnees['nomIngredient'];?></th>
+                    <th><?php echo $donnees['categorieIngredient'];?></th>
+                    <th><?php echo $donnees['quantiteDispo'];?></th>
+                </tr>
+            <?php
+            } 
+            ?>
+        <table>

@@ -1,0 +1,16 @@
+//importation base de données
+
+insert into lieu(longitude,latitude) select longitude,latitude from lieuxbdw1;
+insert into zonegeographique(continent,paysGeo,) select continent,paysbdw1.nom, from paysbdw1;
+insert into adresse(paysAdresse,codePostal,villeAdresse,adresseAdresse,iDLieu) select pays,codePostal,ville,adresse, iDLieu from personnesbdw1 INNER JOIN paysbdw1 on paysbdw1.nom=personnesbdw1.nom INNER JOIN lieuxbdw1 on lieuxbdw1.codePays=paysbdw1.codePays INNER JOIN lieu on lieu.longitude=lieuxbdw1.longitude);
+insert into estune2(iDLieu,iDGeo) select iDLieu,IDGeo from lieu as lie INNER JOIN lieuxbdw1 as libd on lie.longitude=libd.longitude INNER join paysbdw1 as pbd on libd.codePays=pbd.codePays INNER JOIN zonegeographique as zgeo on zgeo.paysGeo=pbd.nom;
+//insert into utlisateur(nomUtilisateur,prenomUtilisateur,mailUtilisateur,dateInscription,genreUtilisateur,iDLieu) select nom,prenom,emailAdresse,dateNaissance,sexe,iDLieu from personnesbdw1 as pbd INNER JOIN adresse as ad on pbd.ville=ad.villeAdresse ;
+
+
+insert into unite(nomUnite,AbbreviationUnite) values("kilogramme","kg");
+insert into unite(nomUnite,AbbreviationUnite) values("gramme","g");
+insert into unite(nomUnite,AbbreviationUnite) values("miligramme","mg");
+insert into unite(nomUnite,AbbreviationUnite) values("centigramme","cg");
+insert into unite(nomUnite,AbbreviationUnite) values("Litre","l");
+insert into unite(nomUnite,AbbreviationUnite) values("miliLitre","ml");
+insert into unite(nomUnite,AbbreviationUnite) values("centilitreLitre","cl");

@@ -1,0 +1,3 @@
+user: p1508726
+password: noNk9i5V
+url: http://bdw1.univ-lyon1.fr/p1508726/morpillon3

@@ -1,0 +1,141 @@
+CREATE DATABASE IF NOT EXISTS ProjetfinalBarrosSauvageot;
+USE ProjetfinalBarrosSauvageot;
+
+DROP TABLE IF EXISTS Etapes ;
+CREATE TABLE Etapes (idEtape INT  AUTO_INCREMENT NOT NULL,
+numeroEtape INT,
+iDRecette INT NOT NULL REFERENCES Recette(iDRecette),
+PRIMARY KEY (idEtape) )  ;
+
+DROP TABLE IF EXISTS Instructions ;
+CREATE TABLE Instructions (iDInstruction INT  AUTO_INCREMENT NOT NULL,
+numIns INT,
+descIns TEXT,
+idEtape INT NOT NULL REFERENCES Etapes(iDEtape),
+PRIMARY KEY (iDInstruction) )  ;
+
+DROP TABLE IF EXISTS Ustensile ;
+CREATE TABLE Ustensile (iDUst INT  AUTO_INCREMENT NOT NULL,
+nom VARCHAR(100),
+PRIMARY KEY (iDUst) )  ;
+
+DROP TABLE IF EXISTS Utilisateur ;
+CREATE TABLE Utilisateur (iDUtilisateur BIGINT  AUTO_INCREMENT NOT NULL,
+nomUtilisateur VARCHAR(100),
+prenomUtilisateur VARCHAR(100),
+mailUtilisateur VARCHAR(200),
+dateInscriptionUti DATE,
+genreUtilisateur VARCHAR(5),
+iDLieu INT NOT NULL REFERENCES Lieu(iDlieu),
+PRIMARY KEY (iDUtilisateur) )  ;
+
+DROP TABLE IF EXISTS Recette ;
+CREATE TABLE Recette (iDRecette INT  AUTO_INCREMENT NOT NULL,
+titre VARCHAR(100),
+nbDePersonne INT,
+categorie VARCHAR(100),
+description TEXT,
+dateRecette DATE,
+iDUtilisateur BIGINT NOT NULL REFERENCES Utilisateur(iDUtilisateur),
+PRIMARY KEY (iDRecette) )  ;
+
+DROP TABLE IF EXISTS Ingredient ;
+CREATE TABLE Ingredient (iDIngredient INT  AUTO_INCREMENT NOT NULL,
+nomIngredient VARCHAR(100),
+categorieIngredient VARCHAR(100),
+quantiteDispo BIGINT,
+PRIMARY KEY (iDIngredient) )  ;
+
+DROP TABLE IF EXISTS Unite ;
+CREATE TABLE Unite (iDUnite INT  AUTO_INCREMENT NOT NULL,
+nomUnite VARCHAR(20),
+abbreviationUnite VARCHAR(20),
+PRIMARY KEY (iDUnite) )  ;
+
+DROP TABLE IF EXISTS Lieu ;
+CREATE TABLE Lieu (iDLieu INT  AUTO_INCREMENT NOT NULL,
+longitude FLOAT,
+latitude FLOAT,
+PRIMARY KEY (iDLieu) )  ;
+
+DROP TABLE IF EXISTS Adresse ;
+CREATE TABLE Adresse (iDAdresse INT  AUTO_INCREMENT NOT NULL,
+paysAdresse VARCHAR(100),
+villeAdresse VARCHAR(100),
+codePostal INT,
+adresseAdresse VARCHAR(300),
+iDLieu BIGINT NOT NULL REFERENCES lieu(iDLieu),
+PRIMARY KEY (iDAdresse) )  ;
+
+DROP TABLE IF EXISTS ZoneGeographique ;
+CREATE TABLE ZoneGeographique (iDGeo INT  AUTO_INCREMENT NOT NULL,
+continent VARCHAR(20),
+paysGeo VARCHAR(100),
+PRIMARY KEY (iDGeo) )  ;
+
+DROP TABLE IF EXISTS estune2;
+CREATE TABLE estune2 (iDLieu BIGINT NOT NULL REFERENCES lieu(iDLieu),
+iDGeo BIGINT NOT NULL REFERENCES zonegeographique(iDGeo)
+PRIMARY KEY (iDLieu,iDGeo);
+
+
+DROP TABLE IF EXISTS DateProd ;
+CREATE TABLE DateProd (iDDate INT  AUTO_INCREMENT NOT NULL,
+dateDeProvenance DATE,
+PRIMARY KEY (iDDate) )  ;
+
+DROP TABLE IF EXISTS Produit ;
+CREATE TABLE Produit (iDProduit INT  AUTO_INCREMENT NOT NULL,
+categorieProduit VARCHAR(100),
+nomProduit VARCHAR(100),
+PRIMARY KEY (iDProduit) )  ;
+
+DROP TABLE IF EXISTS necessite ;
+CREATE TABLE necessite (iDUst INT  AUTO_INCREMENT NOT NULL REFERENCES Ustensile(iDUst),
+idEtape INT NOT NULL REFERENCES Etapes(iDEtape),
+PRIMARY KEY (iDUst,
+ idEtape) )  ;
+
+DROP TABLE IF EXISTS UtiliseIng ;
+CREATE TABLE UtiliseIng (iDRecette INT  NOT NULL REFERENCES Recette(iDRecette),
+iDIngredient INT NOT NULL REFERENCES Ingredient(iDIngredient),
+iDUnite INT NOT NULL REFERENCES Unite(iDUnite),
+quantiteIng FLOAT,
+PRIMARY KEY (iDRecette,
+ iDIngredient,
+ iDUnite) )  ;
+
+DROP TABLE IF EXISTS UtiliseProd ;
+CREATE TABLE UtiliseProd (iDRecette INT NOT NULL REFERENCES Recette(iDRecette),
+iDUnite INT NOT NULL REFERENCES Unite(iDUnite),
+iDProduit INT NOT NULL REFERENCES Produit(iDProduit),
+quantite FLOAT,
+PRIMARY KEY (iDRecette,
+ iDUnite,
+ iDProduit) )  ;
+
+DROP TABLE IF EXISTS aPartirDe ;
+CREATE TABLE aPartirDe (iDIngredient INT NOT NULL REFERENCES Ingredient(iDIngredient),
+iDUnite INT NOT NULL REFERENCES Unite(iDUnite),
+iDProduit INT NOT NULL REFERENCES Produit(iDProduit),
+quantiteComp FLOAT,
+PRIMARY KEY (iDIngredient,
+ iDUnite,
+ iDProduit) )  ;
+
+
+DROP TABLE IF EXISTS ProvientIng ;
+CREATE TABLE ProvientIng (iDIngredient INT  NOT NULL REFERENCES Ingredient(iDIngredient),
+iDLieu INT NOT NULL REFERENCES Lieu(iDLieu),
+iDDate INT NOT NULL REFERENCES DateProd(iDDate),
+PRIMARY KEY (iDIngredient,
+ iDLieu,
+ iDDate) )  ;
+
+DROP TABLE IF EXISTS ProvientProd ;
+CREATE TABLE ProvientProd (iDLieu INT NOT NULL REFERENCES Lieu(iDLieu),
+iDProduit INT NOT NULL REFERENCES Produit(iDProduit),
+iDDate INT NOT NULL REFERENCES DateProd(iDDate),
+PRIMARY KEY (iDLieu,
+ iDProduit,
+ iDDate) )  ;

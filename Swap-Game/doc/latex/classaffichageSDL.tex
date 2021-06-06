@@ -1,0 +1,149 @@
+\hypertarget{classaffichageSDL}{}\section{affichage\+S\+DL Class Reference}
+\label{classaffichageSDL}\index{affichage\+S\+DL@{affichage\+S\+DL}}
+
+
+gere l\textquotesingle{}affichage dans une fenetre sdl  
+
+
+
+
+{\ttfamily \#include $<$affichage\+\_\+\+S\+D\+L.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classaffichageSDL_a0328a046a518efb55f32b9b1a497819e}{init\+S\+DL} ()\hypertarget{classaffichageSDL_a0328a046a518efb55f32b9b1a497819e}{}\label{classaffichageSDL_a0328a046a518efb55f32b9b1a497819e}
+
+\begin{DoxyCompactList}\small\item\em initialise la fenetre d\textquotesingle{}affichage \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_afeec5f3569debd68c5e68ebcddb59a77}{init\+Listes} ()\hypertarget{classaffichageSDL_afeec5f3569debd68c5e68ebcddb59a77}{}\label{classaffichageSDL_afeec5f3569debd68c5e68ebcddb59a77}
+
+\begin{DoxyCompactList}\small\item\em initialise les listes de jeu \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_ad1889ea146099d600f1cf56b630e60b9}{init\+Boutons} ()\hypertarget{classaffichageSDL_ad1889ea146099d600f1cf56b630e60b9}{}\label{classaffichageSDL_ad1889ea146099d600f1cf56b630e60b9}
+
+\begin{DoxyCompactList}\small\item\em initialise les boutons de jeu \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_acc7284fbe0e745814e95df5d9745d1e5}{init\+Boutons\+Menus} ()\hypertarget{classaffichageSDL_acc7284fbe0e745814e95df5d9745d1e5}{}\label{classaffichageSDL_acc7284fbe0e745814e95df5d9745d1e5}
+
+\begin{DoxyCompactList}\small\item\em initialise les boutons du menu principal \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_afa0b67e5ab733f1b5b981e136fc482ab}{init\+Boutons\+Niv} ()\hypertarget{classaffichageSDL_afa0b67e5ab733f1b5b981e136fc482ab}{}\label{classaffichageSDL_afa0b67e5ab733f1b5b981e136fc482ab}
+
+\begin{DoxyCompactList}\small\item\em initialise les boutons de selection des niveaux \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_af3fcae871a3042608370425f3b60019a}{init\+Boutons\+Vic} ()\hypertarget{classaffichageSDL_af3fcae871a3042608370425f3b60019a}{}\label{classaffichageSDL_af3fcae871a3042608370425f3b60019a}
+
+\begin{DoxyCompactList}\small\item\em initialise les boutons de gestion de la victoire \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_a6f2066f410cd54487e1c3370de19808a}{init\+Deco} ()\hypertarget{classaffichageSDL_a6f2066f410cd54487e1c3370de19808a}{}\label{classaffichageSDL_a6f2066f410cd54487e1c3370de19808a}
+
+\begin{DoxyCompactList}\small\item\em initialise divers elements de decoration \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{classaffichageSDL_a13bba158324313457a7153e94625634e}{load\+Surface\+From\+Image} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em cree une surface sdl a partir d\textquotesingle{}une image \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{classaffichageSDL_ab7a09760e550b45a3801bd7627376ee9}{Create\+Texture\+From\+String} (string txt)
+\begin{DoxyCompactList}\small\item\em cree une texture sdl aexture a partir d\textquotesingle{}un string \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_a0cc9cacd83c16fb207dfc6684b2d4962}{update\+Listes} (const std\+::string \&op, \hyperlink{classniveau}{niveau} niveau1, int \&m)
+\begin{DoxyCompactList}\small\item\em mofifie la liste en fonction du bouton appuye \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_a3d6d2467ae9f27f2630b9e6c5bf112e4}{update\+Listes\+Menus} (const std\+::string \&op, int \&choix, \hyperlink{classjeu}{jeu} \&jeu1, \hyperlink{classniveau}{niveau} \&niveau1, int \&niveau\+EC)
+\begin{DoxyCompactList}\small\item\em action du menu en fonction du bouton appuye \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_add85e8a68ed6ec13abddd28faac32c37}{boucle\+S\+DL} ()\hypertarget{classaffichageSDL_add85e8a68ed6ec13abddd28faac32c37}{}\label{classaffichageSDL_add85e8a68ed6ec13abddd28faac32c37}
+
+\begin{DoxyCompactList}\small\item\em la boucle de jeu separee en 9 cas possibles \end{DoxyCompactList}\item 
+void \hyperlink{classaffichageSDL_a5ad77a086c614967394ddc7b630c1442}{detruit\+S\+DL} ()\hypertarget{classaffichageSDL_a5ad77a086c614967394ddc7b630c1442}{}\label{classaffichageSDL_a5ad77a086c614967394ddc7b630c1442}
+
+\begin{DoxyCompactList}\small\item\em detruit l\textquotesingle{}affichage sdl \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+gere l\textquotesingle{}affichage dans une fenetre sdl 
+
+\subsection{Member Function Documentation}
+\index{affichage\+S\+DL@{affichage\+S\+DL}!Create\+Texture\+From\+String@{Create\+Texture\+From\+String}}
+\index{Create\+Texture\+From\+String@{Create\+Texture\+From\+String}!affichage\+S\+DL@{affichage\+S\+DL}}
+\subsubsection[{\texorpdfstring{Create\+Texture\+From\+String(string txt)}{CreateTextureFromString(string txt)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Texture $\ast$ affichage\+S\+D\+L\+::\+Create\+Texture\+From\+String (
+\begin{DoxyParamCaption}
+\item[{string}]{txt}
+\end{DoxyParamCaption}
+)}\hypertarget{classaffichageSDL_ab7a09760e550b45a3801bd7627376ee9}{}\label{classaffichageSDL_ab7a09760e550b45a3801bd7627376ee9}
+
+
+cree une texture sdl aexture a partir d\textquotesingle{}un string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt} & le string a traiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la texture cree 
+\end{DoxyReturn}
+\index{affichage\+S\+DL@{affichage\+S\+DL}!load\+Surface\+From\+Image@{load\+Surface\+From\+Image}}
+\index{load\+Surface\+From\+Image@{load\+Surface\+From\+Image}!affichage\+S\+DL@{affichage\+S\+DL}}
+\subsubsection[{\texorpdfstring{load\+Surface\+From\+Image(std\+::string path)}{loadSurfaceFromImage(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ affichage\+S\+D\+L\+::load\+Surface\+From\+Image (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classaffichageSDL_a13bba158324313457a7153e94625634e}{}\label{classaffichageSDL_a13bba158324313457a7153e94625634e}
+
+
+cree une surface sdl a partir d\textquotesingle{}une image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & chemin d\textquotesingle{}acces a l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la surface sdl cree 
+\end{DoxyReturn}
+\index{affichage\+S\+DL@{affichage\+S\+DL}!update\+Listes@{update\+Listes}}
+\index{update\+Listes@{update\+Listes}!affichage\+S\+DL@{affichage\+S\+DL}}
+\subsubsection[{\texorpdfstring{update\+Listes(const std\+::string \&op, niveau niveau1, int \&m)}{updateListes(const std::string &op, niveau niveau1, int &m)}}]{\setlength{\rightskip}{0pt plus 5cm}void affichage\+S\+D\+L\+::update\+Listes (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{op, }
+\item[{{\bf niveau}}]{niveau1, }
+\item[{int \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{classaffichageSDL_a0cc9cacd83c16fb207dfc6684b2d4962}{}\label{classaffichageSDL_a0cc9cacd83c16fb207dfc6684b2d4962}
+
+
+mofifie la liste en fonction du bouton appuye 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & l\textquotesingle{}operation a effectue \\
+\hline
+{\em niveau1} & le niveau sur lequel on joue \\
+\hline
+{\em m} & le nombre de coup \\
+\hline
+\end{DoxyParams}
+\index{affichage\+S\+DL@{affichage\+S\+DL}!update\+Listes\+Menus@{update\+Listes\+Menus}}
+\index{update\+Listes\+Menus@{update\+Listes\+Menus}!affichage\+S\+DL@{affichage\+S\+DL}}
+\subsubsection[{\texorpdfstring{update\+Listes\+Menus(const std\+::string \&op, int \&choix, jeu \&jeu1, niveau \&niveau1, int \&niveau\+E\+C)}{updateListesMenus(const std::string &op, int &choix, jeu &jeu1, niveau &niveau1, int &niveauEC)}}]{\setlength{\rightskip}{0pt plus 5cm}void affichage\+S\+D\+L\+::update\+Listes\+Menus (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{op, }
+\item[{int \&}]{choix, }
+\item[{{\bf jeu} \&}]{jeu1, }
+\item[{{\bf niveau} \&}]{niveau1, }
+\item[{int \&}]{niveau\+EC}
+\end{DoxyParamCaption}
+)}\hypertarget{classaffichageSDL_a3d6d2467ae9f27f2630b9e6c5bf112e4}{}\label{classaffichageSDL_a3d6d2467ae9f27f2630b9e6c5bf112e4}
+
+
+action du menu en fonction du bouton appuye 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & l\textquotesingle{}operation a effectue \\
+\hline
+{\em choix} & l\textquotesingle{}ecran a afficher \\
+\hline
+{\em jeu1} & la partie sur laquelle le joueur joue \\
+\hline
+{\em niveau1} & le niveau sur lequel le joueur joue \\
+\hline
+{\em niveau\+EC} & l\textquotesingle{}indice du niveau sur lequel le joueur joue \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sdl2/affichage\+\_\+\+S\+D\+L.\+h\item 
+src/sdl2/affichage\+\_\+\+S\+D\+L.\+cpp\end{DoxyCompactItemize}

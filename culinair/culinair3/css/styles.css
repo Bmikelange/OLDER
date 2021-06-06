@@ -1,0 +1,115 @@
+body {
+    background-color: #EEEEEE;
+}
+
+#entete,
+#menu,
+#contenu,
+#footer {
+    padding: 1em 0;
+}
+
+#entete {
+	color:#F4BC58;
+	background-color:black;
+    background-image:url('http://localhost:8080/culinair/img/header_background_tomate.jpg');
+    background-position: right;
+	text-align: left;
+    border-radius: 1em;
+	background-repeat: no-repeat;
+	 padding-left: 1em;
+	 font-family : Cursive;
+}
+
+main {
+    display: flex;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    margin-left: 3%;
+}
+
+#menu {
+    width: 18%;
+    background-color: #F4BC58;
+    padding-left: 1em;
+    line-height: 2em;
+	font-family : Cursive;
+}
+
+#menu a {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+#menu a:visited {
+    color: purple;
+    text-decoration: none;
+}
+
+#contenu {
+    width: 75%;
+    background-color: #FFFFFF;
+    padding-bottom: 6em;
+}
+
+#footer {
+    background-color: Black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    clear: both;
+    border-radius: 1em;
+}
+
+#titreAccueil {
+    text-align: center;
+}
+
+.tableauIngredient
+{
+
+    border-collapse: collapse; /* style des tableaux */
+
+}
+.thIng
+{
+
+    border: 1px solid black; 
+
+}
+
+.tdIng
+{
+
+    border: 1px solid grey;
+
+}
+
+a.info{
+position:relative;
+z-index:24;
+color:#000;
+text-decoration:none
+}
+ 
+a.info:hover{
+z-index:25;
+background-color:#FFF
+}
+ 
+a.info span{
+display: none
+}
+ 
+a.info:hover span{
+display:block;
+position:absolute;
+top:2em; left:2em; width:15em;
+border:1px solid #000;
+background-color:#FFF;
+color:#000;
+text-align: justify;
+font-weight:none;
+padding:5px;
+}
+

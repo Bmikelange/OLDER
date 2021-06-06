@@ -1,0 +1,167 @@
+CREATE DATABASE IF NOT EXIST ProjetTest1;
+USE ProjetTest1;
+
+DROP TABLE IF EXISTS Etapes ;
+CREATE TABLE Etapes (idEtape INT  AUTO_INCREMENT NOT NULL,
+numeroEtape INT,
+iDRecette INT NOT NULL,
+PRIMARY KEY (idEtape) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Instructions ;
+CREATE TABLE Instructions (iDInstruction INT  AUTO_INCREMENT NOT NULL,
+numIns INT,
+descIns TEXT,
+idEtape INT NOT NULL,
+PRIMARY KEY (iDInstruction) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Ustensile ;
+CREATE TABLE Ustensile (iDUst INT  AUTO_INCREMENT NOT NULL,
+nom VARCHAR(100),
+PRIMARY KEY (iDUst) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Utilisateur ;
+CREATE TABLE Utilisateur (iDUtilisateur BIGINT  AUTO_INCREMENT NOT NULL,
+nomUtilisateur VARCHAR(100),
+prenomUtilisateur VARCHAR(100),
+mailUtilisateur VARCHAR(200),
+dateInscriptionUti DATE,
+genreUtilisateur VARCHAR(5),
+iDLieu INT NOT NULL,
+PRIMARY KEY (iDUtilisateur) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Recette ;
+CREATE TABLE Recette (iDRecette INT  AUTO_INCREMENT NOT NULL,
+titre BIGINT,
+nbDePersonne INT,
+categorie VARCHAR(100),
+description TEXT,
+dateRecette DATE,
+iDUtilisateur BIGINT NOT NULL,
+PRIMARY KEY (iDRecette) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Ingredient ;
+CREATE TABLE Ingredient (iDIngredient INT  AUTO_INCREMENT NOT NULL,
+nomIngredient VARCHAR(100),
+categorieIngredient VARCHAR(100),
+quantiteDispo BIGINT,
+PRIMARY KEY (iDIngredient) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Unite ;
+CREATE TABLE Unite (iDUnite INT  AUTO_INCREMENT NOT NULL,
+nomUnite VARCHAR(20),
+abbreviationUnite VARCHAR(20),
+PRIMARY KEY (iDUnite) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Lieu ;
+CREATE TABLE Lieu (iDLieu INT  AUTO_INCREMENT NOT NULL,
+longitude FLOAT,
+latitude FLOAT,
+PRIMARY KEY (iDLieu) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Adresse ;
+CREATE TABLE Adresse (iDAdresse INT  AUTO_INCREMENT NOT NULL,
+paysAdresse VARCHAR(100),
+villeAdresse VARCHAR(100),
+codePostal INT,
+adresseAdresse VARCHAR(300),
+PRIMARY KEY (iDAdresse) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS ZoneGeographique ;
+CREATE TABLE ZoneGeographique (iDGeo INT  AUTO_INCREMENT NOT NULL,
+continent VARCHAR(20),
+paysGeo VARCHAR(100),
+PRIMARY KEY (iDGeo) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS DateProd ;
+CREATE TABLE DateProd (iDDate INT  AUTO_INCREMENT NOT NULL,
+dateDeProvenance VARCHAR,
+PRIMARY KEY (iDDate) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Produit ;
+CREATE TABLE Produit (iDProduit INT  AUTO_INCREMENT NOT NULL,
+categorieProduit VARCHAR(100),
+nomProduit VARCHAR(100),
+PRIMARY KEY (iDProduit) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS necessite ;
+CREATE TABLE necessite (iDUst INT  AUTO_INCREMENT NOT NULL,
+idEtape INT NOT NULL,
+PRIMARY KEY (iDUst,
+ idEtape) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS UtiliseIng ;
+CREATE TABLE UtiliseIng (iDRecette INT  AUTO_INCREMENT NOT NULL,
+iDIngredient INT NOT NULL,
+iDUnite INT NOT NULL,
+quantiteIng FLOAT,
+PRIMARY KEY (iDRecette,
+ iDIngredient,
+ iDUnite) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS UtiliseProd ;
+CREATE TABLE UtiliseProd (iDRecette INT  AUTO_INCREMENT NOT NULL,
+iDUnite INT NOT NULL,
+iDProduit INT NOT NULL,
+quantite FLOAT,
+PRIMARY KEY (iDRecette,
+ iDUnite,
+ iDProduit) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS aPartirDe ;
+CREATE TABLE aPartirDe (iDIngredient INT  AUTO_INCREMENT NOT NULL,
+iDUnite INT NOT NULL,
+iDProduit INT NOT NULL,
+quantiteComp FLOAT,
+PRIMARY KEY (iDIngredient,
+ iDUnite,
+ iDProduit) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS EstUne ;
+CREATE TABLE EstUne (iDLieu INT  AUTO_INCREMENT NOT NULL,
+iDAdresse VARCHAR(100) NOT NULL,
+iDGeo INT NOT NULL,
+PRIMARY KEY (iDLieu,
+ iDAdresse,
+ iDGeo) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS ProvientIng ;
+CREATE TABLE ProvientIng (iDIngredient INT  AUTO_INCREMENT NOT NULL,
+iDLieu INT NOT NULL,
+iDDate INT NOT NULL,
+PRIMARY KEY (iDIngredient,
+ iDLieu,
+ iDDate) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS ProvientProd ;
+CREATE TABLE ProvientProd (iDLieu INT  AUTO_INCREMENT NOT NULL,
+iDProduit INT NOT NULL,
+iDDate INT NOT NULL,
+PRIMARY KEY (iDLieu,
+ iDProduit,
+ iDDate) ) ENGINE=InnoDB;
+
+ALTER TABLE Etapes ADD CONSTRAINT FK_Etapes_iDRecette FOREIGN KEY (iDRecette) REFERENCES Recette (iDRecette);
+
+ALTER TABLE Instructions ADD CONSTRAINT FK_Instructions_idEtape FOREIGN KEY (idEtape) REFERENCES Etapes (idEtape);
+ALTER TABLE Utilisateur ADD CONSTRAINT FK_Utilisateur_iDLieu FOREIGN KEY (iDLieu) REFERENCES Lieu (iDLieu);
+ALTER TABLE Recette ADD CONSTRAINT FK_Recette_iDUtilisateur FOREIGN KEY (iDUtilisateur) REFERENCES Utilisateur (iDUtilisateur);
+ALTER TABLE necessite ADD CONSTRAINT FK_necessite_iDUst FOREIGN KEY (iDUst) REFERENCES Ustensile (iDUst);
+ALTER TABLE necessite ADD CONSTRAINT FK_necessite_idEtape FOREIGN KEY (idEtape) REFERENCES Etapes (idEtape);
+ALTER TABLE UtiliseIng ADD CONSTRAINT FK_UtiliseIng_iDRecette FOREIGN KEY (iDRecette) REFERENCES Recette (iDRecette);
+ALTER TABLE UtiliseIng ADD CONSTRAINT FK_UtiliseIng_iDIngredient FOREIGN KEY (iDIngredient) REFERENCES Ingredient (iDIngredient);
+ALTER TABLE UtiliseIng ADD CONSTRAINT FK_UtiliseIng_iDUnite FOREIGN KEY (iDUnite) REFERENCES Unite (iDUnite);
+ALTER TABLE UtiliseProd ADD CONSTRAINT FK_UtiliseProd_iDRecette FOREIGN KEY (iDRecette) REFERENCES Recette (iDRecette);
+ALTER TABLE UtiliseProd ADD CONSTRAINT FK_UtiliseProd_iDUnite FOREIGN KEY (iDUnite) REFERENCES Unite (iDUnite);
+ALTER TABLE UtiliseProd ADD CONSTRAINT FK_UtiliseProd_iDProduit FOREIGN KEY (iDProduit) REFERENCES Produit (iDProduit);
+ALTER TABLE aPartirDe ADD CONSTRAINT FK_aPartirDe_iDIngredient FOREIGN KEY (iDIngredient) REFERENCES Ingredient (iDIngredient);
+ALTER TABLE aPartirDe ADD CONSTRAINT FK_aPartirDe_iDUnite FOREIGN KEY (iDUnite) REFERENCES Unite (iDUnite);
+ALTER TABLE aPartirDe ADD CONSTRAINT FK_aPartirDe_iDProduit FOREIGN KEY (iDProduit) REFERENCES Produit (iDProduit);
+ALTER TABLE EstUne ADD CONSTRAINT FK_EstUne_iDLieu FOREIGN KEY (iDLieu) REFERENCES Lieu (iDLieu);
+ALTER TABLE EstUne ADD CONSTRAINT FK_EstUne_iDAdresse FOREIGN KEY (iDAdresse) REFERENCES Adresse (iDAdresse);
+ALTER TABLE EstUne ADD CONSTRAINT FK_EstUne_iDGeo FOREIGN KEY (iDGeo) REFERENCES ZoneGeographique (iDGeo);
+ALTER TABLE ProvientIng ADD CONSTRAINT FK_ProvientIng_iDIngredient FOREIGN KEY (iDIngredient) REFERENCES Ingredient (iDIngredient);
+ALTER TABLE ProvientIng ADD CONSTRAINT FK_ProvientIng_iDLieu FOREIGN KEY (iDLieu) REFERENCES Lieu (iDLieu);
+ALTER TABLE ProvientIng ADD CONSTRAINT FK_ProvientIng_iDDate FOREIGN KEY (iDDate) REFERENCES DateProd (iDDate);
+ALTER TABLE ProvientProd ADD CONSTRAINT FK_ProvientProd_iDLieu FOREIGN KEY (iDLieu) REFERENCES Lieu (iDLieu);
+ALTER TABLE ProvientProd ADD CONSTRAINT FK_ProvientProd_iDProduit FOREIGN KEY (iDProduit) REFERENCES Produit (iDProduit);
+ALTER TABLE ProvientProd ADD CONSTRAINT FK_ProvientProd_iDDate FOREIGN KEY (iDDate) REFERENCES DateProd (iDDate);

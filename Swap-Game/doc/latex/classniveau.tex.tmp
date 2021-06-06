@@ -1,0 +1,260 @@
+\hypertarget{classniveau}{}\section{niveau Class Reference}
+\label{classniveau}\index{niveau@{niveau}}
+
+
+gere les niveaux en jeu  
+
+
+
+
+{\ttfamily \#include $<$push\+\_\+swap.\+h$>$}
+
+
+
+Inheritance diagram for niveau\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classniveau_adcbc976ea17ffee9593046f08ce43b4e}{niveau} ()\hypertarget{classniveau_adcbc976ea17ffee9593046f08ce43b4e}{}\label{classniveau_adcbc976ea17ffee9593046f08ce43b4e}
+
+\begin{DoxyCompactList}\small\item\em le constructeur par defaut du niveau \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_a3c664d133dfc481c06ae8d8a72670ae2}{charger\+Niveau} (int i)
+\begin{DoxyCompactList}\small\item\em charge un niveau depuis un fichier \end{DoxyCompactList}\item 
+\hyperlink{classTableauDynamique}{Tableau\+Dynamique} $\ast$ \hyperlink{classniveau_ad420fb7d407fb6cc6820347f1e96147d}{get\+Liste} ()
+\begin{DoxyCompactList}\small\item\em recupere la liste principal \end{DoxyCompactList}\item 
+\hyperlink{classTableauDynamique}{Tableau\+Dynamique} $\ast$ \hyperlink{classniveau_af726bb99e8084cc4a42da56cb4f97645}{get\+Liste\+Transfert} ()
+\begin{DoxyCompactList}\small\item\em recupere la liste secondaire \end{DoxyCompactList}\item 
+int {\bfseries get\+Reussi} () const \hypertarget{classniveau_abf845a31692d533e5237fc3fa8c5c91b}{}\label{classniveau_abf845a31692d533e5237fc3fa8c5c91b}
+
+\item 
+int {\bfseries get\+Etoile} () const \hypertarget{classniveau_ab4b8985af7cf4b9d43dc99ce1141dfa4}{}\label{classniveau_ab4b8985af7cf4b9d43dc99ce1141dfa4}
+
+\item 
+int {\bfseries get\+Fonction\+Activee} (int i) const \hypertarget{classniveau_a9cad155a3a7d22fae1887cb051f549f9}{}\label{classniveau_a9cad155a3a7d22fae1887cb051f549f9}
+
+\item 
+int {\bfseries get\+Nb\+Coup\+Max} () const \hypertarget{classniveau_a4da6df70a5a411fcdad53d350e6f241f}{}\label{classniveau_a4da6df70a5a411fcdad53d350e6f241f}
+
+\item 
+int {\bfseries get\+Nb\+Etoile\+Pour\+Debloquer} () const \hypertarget{classniveau_a6810f2e666a6f695394f30526c691da3}{}\label{classniveau_a6810f2e666a6f695394f30526c691da3}
+
+\item 
+void {\bfseries set\+Liste} (unsigned int i, int val)\hypertarget{classniveau_aea9566eef3ee20dd22893c82a7312b81}{}\label{classniveau_aea9566eef3ee20dd22893c82a7312b81}
+
+\item 
+void {\bfseries set\+Liste\+Transfert} (unsigned int i, int val)\hypertarget{classniveau_ac9544c148904084e2be1cc18d876790e}{}\label{classniveau_ac9544c148904084e2be1cc18d876790e}
+
+\item 
+void {\bfseries set\+Reussi} (int reussite)\hypertarget{classniveau_a8dba7b0176181eba751d976e7d5a951b}{}\label{classniveau_a8dba7b0176181eba751d976e7d5a951b}
+
+\item 
+void {\bfseries set\+Etoile} (int i)\hypertarget{classniveau_a5ed8dd0d07c02bccf163a38898e0c0a5}{}\label{classniveau_a5ed8dd0d07c02bccf163a38898e0c0a5}
+
+\item 
+void {\bfseries set\+Nb\+Coup\+Max} (int i)\hypertarget{classniveau_a34658155c33480ed64224f95e32bc17e}{}\label{classniveau_a34658155c33480ed64224f95e32bc17e}
+
+\item 
+void {\bfseries set\+Fonction\+Activee} (int i, int val)\hypertarget{classniveau_a23dc89f31027fd3356daec062a8b07da}{}\label{classniveau_a23dc89f31027fd3356daec062a8b07da}
+
+\item 
+void {\bfseries set\+Nb\+Etoile\+Pour\+Debloquer} (int val)\hypertarget{classniveau_a92c0843812c7ad9fe442551f35ff9d77}{}\label{classniveau_a92c0843812c7ad9fe442551f35ff9d77}
+
+\item 
+void {\bfseries sauve\+Niveau} (int i)\hypertarget{classniveau_a1998a39272f77d7e6c78ee37f9f59215}{}\label{classniveau_a1998a39272f77d7e6c78ee37f9f59215}
+
+\item 
+void \hyperlink{classniveau_a5531f633a500b97cf7493b5fe1e27858}{sa} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tab)
+\begin{DoxyCompactList}\small\item\em echange les deux premiers elements de la liste \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_a93ffbe15adacaba6c278a35d4a690abe}{ss} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabB)
+\begin{DoxyCompactList}\small\item\em fais sa sur les deux liste \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_a29e8b6d4812970899f06a9d73bc2f0d4}{pa} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabB)
+\begin{DoxyCompactList}\small\item\em mets le premier element de la liste principale au debut de la liste secondaire \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_a9f4d1d770f367be0494b1b2b06d7bdd1}{ra} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tab)
+\begin{DoxyCompactList}\small\item\em mets le dernier element de la liste a son debut \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_a2a6d0b46fa32aec5e51e3f0f946230dd}{rr} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabB)
+\begin{DoxyCompactList}\small\item\em fais sa sur les deux liste \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_adb43369516c1b04b7563b0f98d98f66d}{rra} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tab)
+\begin{DoxyCompactList}\small\item\em mets le premier element de la liste a sa fin \end{DoxyCompactList}\item 
+void \hyperlink{classniveau_ac05541a70875c1eec8c3328543d4622a}{rrr} (\hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabA, \hyperlink{classTableauDynamique}{Tableau\+Dynamique} \&tabB)
+\begin{DoxyCompactList}\small\item\em fais sa sur les deux liste \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+gere les niveaux en jeu 
+
+\subsection{Member Function Documentation}
+\index{niveau@{niveau}!charger\+Niveau@{charger\+Niveau}}
+\index{charger\+Niveau@{charger\+Niveau}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{charger\+Niveau(int i)}{chargerNiveau(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::charger\+Niveau (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a3c664d133dfc481c06ae8d8a72670ae2}{}\label{classniveau_a3c664d133dfc481c06ae8d8a72670ae2}
+
+
+charge un niveau depuis un fichier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & designe l\textquotesingle{}indice du niveau a charger \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!get\+Liste@{get\+Liste}}
+\index{get\+Liste@{get\+Liste}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{get\+Liste()}{getListe()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tableau\+Dynamique} $\ast$ niveau\+::get\+Liste (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_ad420fb7d407fb6cc6820347f1e96147d}{}\label{classniveau_ad420fb7d407fb6cc6820347f1e96147d}
+
+
+recupere la liste principal 
+
+\begin{DoxyReturn}{Returns}
+un pointeur sur la liste 
+\end{DoxyReturn}
+\index{niveau@{niveau}!get\+Liste\+Transfert@{get\+Liste\+Transfert}}
+\index{get\+Liste\+Transfert@{get\+Liste\+Transfert}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{get\+Liste\+Transfert()}{getListeTransfert()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tableau\+Dynamique} $\ast$ niveau\+::get\+Liste\+Transfert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_af726bb99e8084cc4a42da56cb4f97645}{}\label{classniveau_af726bb99e8084cc4a42da56cb4f97645}
+
+
+recupere la liste secondaire 
+
+\begin{DoxyReturn}{Returns}
+un pointeur sur la liste 
+\end{DoxyReturn}
+\index{niveau@{niveau}!pa@{pa}}
+\index{pa@{pa}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{pa(\+Tableau\+Dynamique \&tab\+A, Tableau\+Dynamique \&tab\+B)}{pa(TableauDynamique &tabA, TableauDynamique &tabB)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::pa (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tabA, }
+\item[{{\bf Tableau\+Dynamique} \&}]{tabB}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a29e8b6d4812970899f06a9d73bc2f0d4}{}\label{classniveau_a29e8b6d4812970899f06a9d73bc2f0d4}
+
+
+mets le premier element de la liste principale au debut de la liste secondaire 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste principal d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+{\em tab} & la liste liste secondaire d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!ra@{ra}}
+\index{ra@{ra}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{ra(\+Tableau\+Dynamique \&tab)}{ra(TableauDynamique &tab)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::ra (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tab}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a9f4d1d770f367be0494b1b2b06d7bdd1}{}\label{classniveau_a9f4d1d770f367be0494b1b2b06d7bdd1}
+
+
+mets le dernier element de la liste a son debut 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!rr@{rr}}
+\index{rr@{rr}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{rr(\+Tableau\+Dynamique \&tab\+A, Tableau\+Dynamique \&tab\+B)}{rr(TableauDynamique &tabA, TableauDynamique &tabB)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::rr (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tabA, }
+\item[{{\bf Tableau\+Dynamique} \&}]{tabB}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a2a6d0b46fa32aec5e51e3f0f946230dd}{}\label{classniveau_a2a6d0b46fa32aec5e51e3f0f946230dd}
+
+
+fais sa sur les deux liste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste principal d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+{\em tab} & la liste liste secondaire d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!rra@{rra}}
+\index{rra@{rra}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{rra(\+Tableau\+Dynamique \&tab)}{rra(TableauDynamique &tab)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::rra (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tab}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_adb43369516c1b04b7563b0f98d98f66d}{}\label{classniveau_adb43369516c1b04b7563b0f98d98f66d}
+
+
+mets le premier element de la liste a sa fin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!rrr@{rrr}}
+\index{rrr@{rrr}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{rrr(\+Tableau\+Dynamique \&tab\+A, Tableau\+Dynamique \&tab\+B)}{rrr(TableauDynamique &tabA, TableauDynamique &tabB)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::rrr (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tabA, }
+\item[{{\bf Tableau\+Dynamique} \&}]{tabB}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_ac05541a70875c1eec8c3328543d4622a}{}\label{classniveau_ac05541a70875c1eec8c3328543d4622a}
+
+
+fais sa sur les deux liste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste principal d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+{\em tab} & la liste liste secondaire d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!sa@{sa}}
+\index{sa@{sa}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{sa(\+Tableau\+Dynamique \&tab)}{sa(TableauDynamique &tab)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::sa (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tab}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a5531f633a500b97cf7493b5fe1e27858}{}\label{classniveau_a5531f633a500b97cf7493b5fe1e27858}
+
+
+echange les deux premiers elements de la liste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\index{niveau@{niveau}!ss@{ss}}
+\index{ss@{ss}!niveau@{niveau}}
+\subsubsection[{\texorpdfstring{ss(\+Tableau\+Dynamique \&tab\+A, Tableau\+Dynamique \&tab\+B)}{ss(TableauDynamique &tabA, TableauDynamique &tabB)}}]{\setlength{\rightskip}{0pt plus 5cm}void niveau\+::ss (
+\begin{DoxyParamCaption}
+\item[{{\bf Tableau\+Dynamique} \&}]{tabA, }
+\item[{{\bf Tableau\+Dynamique} \&}]{tabB}
+\end{DoxyParamCaption}
+)}\hypertarget{classniveau_a93ffbe15adacaba6c278a35d4a690abe}{}\label{classniveau_a93ffbe15adacaba6c278a35d4a690abe}
+
+
+fais sa sur les deux liste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & la liste principal d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+{\em tab} & la liste liste secondaire d\textquotesingle{}element ou effectuer l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/main/push\+\_\+swap.\+h\item 
+src/main/push\+\_\+swap.\+cpp\end{DoxyCompactItemize}

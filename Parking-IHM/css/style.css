@@ -1,0 +1,169 @@
+@import url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
+label
+{
+  display: inline !important;
+}
+
+table{
+  color: #566787;
+}
+.title-table h2
+{
+  margin-top: 0px !important;
+  color: #566787;
+
+}
+.span3
+{
+  display: none;
+}
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+    text-align: center !important;
+	}
+  .search-box
+  {
+    margin-top: -43px;
+  }
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+
+}
+.alert-danger
+{
+  display: none;
+}
+
+@media (max-width: 767px) {
+    .first-form
+    {
+      width: 300px !important;
+    }
+}
+
+#collapse1
+{
+  margin-bottom: 60px;
+
+}
+.edit_img
+{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.table-icon{
+  height: 20px;
+
+}
+.search-box
+{
+	position: relative;
+	float: right;
+}
+
+.search-box input
+{
+  height: 34px;
+  border-radius: 20px;
+  padding-left: 35px;
+  border-color: #ddd;
+  box-shadow: none;
+}
+.search-box i
+{
+  color: #a0a5b1;
+  position: absolute;
+  font-size: 16px;
+  top: 8px;
+  left: 25px;
+}
+.form-add
+{
+   border: 2px solid #f8f9fa;
+   background-color: #f8f9fa;
+   box-shadow: 10px 10px 5px #aaaaaa;
+   border-radius: 5px;
+   padding: 30px;
+}
+.body_content
+{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  width: 100%;
+}
+nav
+{
+  border: 2px solid #f8f9fa;
+  box-shadow: 10px 10px 5px #aaaaaa;
+
+}
+body{
+  background-color: #f0f8ff !important;
+}
+.logo-img img{
+  width: 70px;
+  height: 50px;
+  margin-top: -13px;
+}
+.navbar-collapse a
+{
+  font-weight: 900;
+}
+h3
+{
+  color : #566787 !important;
+  font-weight: 900 !important;
+
+}
+
+.form-content
+{
+  width: 100%;
+}
+.footer-paragraf
+{
+  color: rgba(0,0,0,.5);
+  padding-top: 25px;
+}
+.description h2{
+  font-weight: 600;
+  color: #207d98;
+
+}
+.description
+{
+  font-size: 15;
+  padding-bottom: 25px;
+  color: #65808E;
+}
+.footer
+{
+  margin-top: 20px;
+}
